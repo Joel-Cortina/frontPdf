@@ -1,0 +1,154 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.login{
+    background: #ececec;
+    padding: 0 20px 0 20px;
+}
+.bienvenida {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #40414a;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.side-image{
+    background-image: url(/static/img/red5glogo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+}
+img{
+    width: 35px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border-radius: 9px;
+}
+.row{
+    width: 700px;
+    height: 450px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+}
+.rigth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.input-box{
+    width: 330px;
+    box-sizing: border-box;
+    margin-top: -20px; 
+}
+.input-box header{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.4375rem;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.input{
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2); 
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+}
+.input-box .input-field label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-field .input:focus ~ label{
+    top: -20px;
+    font-size: 13px;
+}
+.input-field .input:valid ~ label{
+    top: -20px;
+    font-size: 13px;
+    color: #5d5076;
+}
+.input-field .input:focus, .input-field .input:valid{
+    border-bottom: 1px solid #743ae1;
+}
+.submit {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 1.25rem;
+    background-color: #ccc; 
+    color: white;
+    cursor: not-allowed; 
+    border: 1px solid #ddd;
+}
+
+.submit:enabled {
+    background-color: #dc3545; 
+    cursor: pointer;
+    border: 1px solid #dc3545;
+}
+
+.submit:enabled:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+.registrarse{
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+span a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    transition: .5s;
+}
+span a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+@media only screen and (max-width: 768px){
+    .side-image{
+        border-radius: 10px 10px 0 0;
+    }
+    img{
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+    .text{
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+    .text p,i{
+        font-size: 17px;
+    }
+    .row{
+        max-width: 420px;
+        width: 100%;
+    }
+}
